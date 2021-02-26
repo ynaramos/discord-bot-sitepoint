@@ -13,7 +13,6 @@ bot.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('pong');
     msg.channel.send('pong');
-
   } else if (msg.content.startsWith('!kick')) {
     if (msg.mentions.users.size) {
       const taggedUser = msg.mentions.users.first();
@@ -23,3 +22,9 @@ bot.on('message', msg => {
     }
   }
 });
+
+bot.on('message', msg => {
+  if (msg.content === '!renge') {
+    msg.channel.send("nyanpasu");
+  }
+})
