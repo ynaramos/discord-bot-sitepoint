@@ -1,3 +1,4 @@
+const api = require('./api.js');
 const { TOKEN } = require('./config.json');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
@@ -12,6 +13,7 @@ bot.login(TOKEN);
 
 bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
+  api.authoriseUser();
 });
 
 bot.on('message', msg => {

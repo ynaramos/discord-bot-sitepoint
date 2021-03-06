@@ -6,7 +6,7 @@ module.exports = {
     name: `${PREFIX}nyanpasu`,
     description: 'Nyanpasu!',
     execute(msg, args) {
-      msg.channel.send(`Nyanpasu~`);
+      msg.channel.send(`Nyanpasu~ ${args[0]}`);
     }
   },
   Renchon: {
